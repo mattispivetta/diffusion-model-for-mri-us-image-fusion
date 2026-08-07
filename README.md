@@ -16,7 +16,12 @@ Our method is a continuation of previous work carried out within the same resear
 
 ## Usage
 ### 1. Installation Procedure
-
+We recommend following the instructions provided in the Github repository Denoising Diffusion Model for Multi-Modality Image fusion, as the original code (which we modified for our needs) comes from there [2]. Follow the instructions provided with the files given in our repository. Please note that we used Python version 3.12 and not 3.8. It is advisable to install the packages listed in the Github repository (requirement.txt file) one by one and not all at once with the command indicated :
+```python
+pip install requirements.txt
+```
+without specifying the version so that any dependency issues between different packages are automatically resolved. This process is long and tedious, but it is the only way to ensure that all of the packages have the correct versions, without dependency issues.
+Please do not forget to download the checkpoint "256x256_diffusion_uncond.pt" available at [this link](https://github.com/openai/guided-diffusion)  and place it in the './DDFM-PALM-main/models/' directory. 
 
 ### 2. Inference
 
