@@ -1,4 +1,4 @@
-# diffusion-model-for-mri-us-image-fusion
+# Diffusion-Based Method for MRI–US Image Fusion
 
 ## Abstract
 This repository presents two image fusion methods for Magnetic Resonance Imaging (MRI) and Ultrasound (US) images. The objective of combining these two imaging modalities is to exploit their complementary strengths, namely the high spatial resolution of US images and the high tissue contrast of MRI images, while mitigating their respective limitations: the high noise level and low contrast of US images, and the relatively low spatial resolution of MRI images.
