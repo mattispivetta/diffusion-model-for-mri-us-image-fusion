@@ -93,7 +93,7 @@ We recommend following the instructions provided in the Github repository Denois
 pip install requirements.txt
 ```
 without specifying the version so that any dependency issues between different packages are automatically resolved. This process is long and tedious, but it is the only way to ensure that all of the packages have the correct versions, without dependency issues.
-Please do not forget to download the checkpoint "256x256_diffusion_uncond.pt" available at [this link](https://github.com/openai/guided-diffusion)  and place it in the './DDFM-PALM-main/models/' directory. 
+Please do not forget to download the checkpoint "256x256_diffusion_uncond.pt" available at [this link](https://github.com/openai/guided-diffusion)  and place it in the `./DDFM-PALM-main/models/` directory. 
 
 ### 2. Inference with DDFM-PALM
 
