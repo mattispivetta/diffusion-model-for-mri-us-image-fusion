@@ -23,12 +23,41 @@ pip install requirements.txt
 without specifying the version so that any dependency issues between different packages are automatically resolved. This process is long and tedious, but it is the only way to ensure that all of the packages have the correct versions, without dependency issues.
 Please do not forget to download the checkpoint "256x256_diffusion_uncond.pt" available at [this link](https://github.com/openai/guided-diffusion)  and place it in the './DDFM-PALM-main/models/' directory. 
 
-### 2. Inference
-If you want to infer with our method DDFM-PALM, please go to the selected dossier and run
+### 2. Inference with DDFM-PALM
+
+To perform inference with our DDFM-PALM method, navigate to the DDFM-PALM-main directory and run the appropriate script depending on the dimensions of the input data.
+
+#### Data with the same dimensions
+For input data with the same dimensions, run:
 ```python
 python sampleTLSE_unidim.py
 ```
-for data which have se ame size, n'oublier pas de selectionner
+Before running the script, make sure that the following import is uncommented in `./DDFM-PALM-main/guided_diffusion/gaussian_diffusion.py`: 
+```python
+from .PALM_DDFM_unidim import fusion_onestep
+#from .PALM_DDFM import fusion_onestep
+```
+#### Data with different dimensions
+For input data with different dimensions, run:
+```python
+python sampleTLSE.py
+```
+In this case, make sure that the following import is uncommented in `./DDFM-PALM-main/guided_diffusion/gaussian_diffusion.py`:
+```python
+# from .PALM_DDFM_unidim import fusion_onestep
+from .PALM_DDFM import fusion_onestep
+```
+
+Then, the fused results will be saved in the `./DDFM-PALM-main/output/recon/` folder.
+
+### 2. Inference PALM
+To perform inference with PALM method, navigate to the PALM-main directory and run the appropriate script depending on the dimensions of the input data:
+```python
+python palm_main.py
+```
+```python
+python palm_main_unidim.py
+```
 
 
 ## References
