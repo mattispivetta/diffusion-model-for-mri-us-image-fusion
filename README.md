@@ -24,7 +24,11 @@ without specifying the version so that any dependency issues between different p
 Please do not forget to download the checkpoint "256x256_diffusion_uncond.pt" available at [this link](https://github.com/openai/guided-diffusion)  and place it in the './DDFM-PALM-main/models/' directory. 
 
 ### 2. Inference
-
+If you want to infer with our method DDFM-PALM, please go to the selected dossier and run
+```python
+python sampleTLSE_unidim.py
+```
+for data which have se ame size, n'oublier pas de selectionner
 
 
 ## References
