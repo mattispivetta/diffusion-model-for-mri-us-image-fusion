@@ -10,9 +10,81 @@ The original DDFM method is a diffusion-based image fusion framework designed fo
 Our method is a continuation of previous work carried out within the same research group, available on GitHub at: [Denoising Diffusion model with Proximal Alternating Linearized Minimization for image fusion](https://github.com/TLongin/Denoising-Diffusion-model-with-Proximal-Alternating-Linearized-Minimization). This work aims to improve and correct the previous implementation.
 
 ## Results
+We consider two datasets in our experiments. The first is a synthetic dataset, consisting of Data2 and Data3, for which ground-truth images are available. The second is a phantom dataset, referred to as Data1, for which only the observed images are available.
 
+For more details about the synthetic datasets, please refer to the following GitHub repository: [Fusion of Magnetic Resonance and Ultrasound Images for Endometriosis Detection](https://github.com/TLongin/Fusion-of-Magnetic-Resonance-and-Ultrasound-Images-for-Endometriosis-Detection)
+<h3>Data 1</h3>
+<table>
+  <tr>
+    <td align="center">
+      <img src="data/Data1/irm.png" width="200"><br>
+      <b>MRI image</b>
+    </td>
+    <td align="center">
+      <img src="data/Data1/us.png" width="200"><br>
+      <b>US image</b>
+    </td>
+  </tr>
+</table>
 
+<h4>Fused images : Data 1</h4>
+<table>
+  <tr>
+    <td align="center">
+      <img src="results/Data1_palm_fused.png" width="200"><br>
+      <b>PALM method</b>
+    </td>
+    <td align="center">
+      <img src="results/Data1_ddfm_palm_fused.png" width="200"><br>
+      <b>DDFM-PALM method</b>
+    </td>
+  </tr>
+</table>
 
+<h3> Data 3</h3>
+<table>
+  <tr>
+    <td align="center">
+      <img src="data/Data3/Data3_irm_gt.png" width="200"><br>
+      <b>MRI Ground Truth</b>
+    </td>
+    <td align="center">
+      <img src="data/Data3/Data3_irm.png" width="200"><br>
+      <b>MRI Observed</b>
+    </td>
+    <td align="center">
+      <img src="data/Data3/Data3_us.png" width="200"><br>
+      <b>US Observed</b>
+    </td>
+    <td align="center">
+      <img src="data/Data3/Data3_us_gt.png" width="200"><br>
+      <b>US Ground Truth</b>
+    </td>
+  </tr>
+</table>
+
+<h4>Fused images : Data 3</h4>
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="results/Data3_palm_fused.png" width="200"><br>
+      <b>PALM method</b>
+    </td>
+    <td align="center">
+      <img src="results/Data3_ddfm_palm_fused.png" width="200"><br>
+      <b>DDFM-PALM method</b>
+    </td>
+  </tr>
+</table>
+
+#### Quantitative Results
+
+| Metrics | PALM with US GT | PALM with IRM GT | Our Method with US GT | Our Method with IRM GT |
+|:--------|-----------:|------------:|-----------:|------------:|
+| RMSE ↓  | 26.97837 | 17.23969 |  **26.17978** | **12.79862** |
+| PSNR ↑  | 19.51049 | 23.40021 |  **19.77152** | **25.98754** |
+| SSIM ↑  | 0.65687 | 0.63748 |  **0.74476** | **0.70930** |
 
 ## Usage
 ### 1. Installation Procedure
