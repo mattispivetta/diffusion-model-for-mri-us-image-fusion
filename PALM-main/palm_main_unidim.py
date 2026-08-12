@@ -1,7 +1,7 @@
 #**************************************************************************
 # Denoising Diffusion Model for Multi-modality Image Fusion with Proximal
 # Alternating Linearized Minimization algorithm
-# Author: Tom Longin (2026 June)
+# Author: Mattis Pivetta (2026 August)
 # University of Toulouse, IRIT
 # Email: mattis.pivetta@irit.fr
 #
