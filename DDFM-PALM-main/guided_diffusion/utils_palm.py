@@ -257,10 +257,8 @@ def FusionPALM(y1, y2, c, tau1, tau2, tau3, tau4, d, m_iteration, f_np):
     tau2 = tau3     # US (influence TV)
     tau3 = tau4     # US (influence IRM)
 
-    #x2 = f_np_resize + c1
     x2 = y2 + c1
     x1 = f_np_resize
-    #x1 = yint
     
     # Boucle d'itération PALM
     for i in range(m_iteration):
